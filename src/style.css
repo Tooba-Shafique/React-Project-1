@@ -8,7 +8,8 @@
 .fitness {
     font-weight: bold;
     font-size: 20px;
-    margin-right: 100px;
+    margin-right: 200px;
+
 }
 
 .tooba {
@@ -24,8 +25,10 @@
 }
 
 nav img {
-    border: 2px solid rgb(26, 24, 24);
+    border: 2px solid rgb(41, 30, 30);
     border-radius: 40px;
+    height: 10px;
+    width: 70px;
 }
 
 img {
@@ -140,7 +143,7 @@ img {
 #Home::before {
     content: "";
     position: absolute;
-    background: url('Images/img1.jpg') no-repeat center center/cover;
+    background: url('/public/Images/img1.jpg') no-repeat center center/cover;
     height: 642px;
     top: 0px;
     left: 0px;
@@ -193,101 +196,116 @@ img {
 }
 
 /* Clients Section */
-#client-section {
-    margin: 34px;
+.client-section {
+    margin: 34px auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: url('/public/Images/img\ new.jpg') no-repeat center center/cover;
 }
 
-#client-section::before {
-    content: "";
-    position: absolute;
-    background: url('Images/main.jpg');
+.clients {
+    display: flex;
+flex-direction:row;
+
+    margin-top: 20px;
     width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.3;
+   
 }
 
-#Clients {
+.client-item {
+    margin: 10px;
+  
+}
+
+.clients img {
+    height: 150px;
+    width: 150px;
+    margin: 15px;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin-left: 70px;
+}
+
+/* contact section */
+#contact {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
     width: 100%;
-}
-
-.client-item {
-    margin: 10px;
-}
-
-#Clients img {
-    height: 120px;
-    width: 120px;
-    margin: 15px;
-    border: 2px solid white;
-    border-radius: 30px;
-}
-
-/* Contact Section */
-#contact {
-    margin: 34px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-#contact::before {
+    background: url('/public/Images/main.jpg') no-repeat center center/cover;
+    position: relative;
+  }
+  
+  #contact::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: url('Images/main.jpg') no-repeat center center/cover;
-}
-
-#contact h1 {
-    color: rgb(15, 4, 4);
+    background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
+  }
+  
+  #contact h1 {
+    color: white;
     text-align: center;
     font-family: 'Bree Serif', serif;
-    font-size: 40px;
+    font-size: 60px;
     margin-bottom: 20px;
-}
-
-#contact-box {
+    z-index: 1; /* Ensure it's on top of the overlay */
+  }
+  
+  #contact-box {
+    color: rgb(239, 234, 229);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 34px;
     width: 100%;
-}
-
-#contact-box input,
-#contact-box textarea {
+    margin-top: 20px; /* Adjust the margin as needed */
+    z-index: 1; /* Ensure it's on top of the overlay */
+  }
+  
+  #contact-box input,
+  #contact-box textarea {
     width: 100%;
     padding: 0.5rem;
     border-radius: 9px;
     font-size: 1.1rem;
     margin-bottom: 10px;
-}
-
-#contact-box form {
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
+  }
+  
+  #contact-box form {
     width: 40%;
     margin-bottom: 20px;
-}
-
-#contact-box label {
+  }
+  
+  #contact-box label {
     font-size: 1.3rem;
     font-family: 'Bree Serif', serif;
     margin-bottom: 5px;
-}
-
+  }
+  
+  #contact-box button {
+    padding: 10px 20px;
+    background-color: #6d0c0c;
+    color: #fff;
+    border: none;
+   margin-top: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 35px auto;
+    display: block;
+    
+      }
+  
+  
+  #contact-box button:hover {
+    background-color: #000810;
+  }
 @media (max-width: 1200px) {
     #home, #services, #contact, #client-section {
         padding: 3px 100px;
@@ -401,13 +419,13 @@ footer {
 
 .btn {
     padding: 5px 70px;
-    border: 2px solid white;
-    background-color: brown;
+    background-color: #6d0c0c;
     color: white;
     margin: 130px auto;
-    font-size: 1.3rem;
-    border-radius: 10px;
+    font-size: 1.1rem;
     cursor: pointer;
+    width: 400px;
+    margin-top: 60px;
 }
 .btn:hover {
     background-color: black;

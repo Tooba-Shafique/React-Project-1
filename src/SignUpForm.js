@@ -29,7 +29,7 @@ function SignUpForm() {
       <div className="signup-form">
       
         <form onSubmit={handleSubmit}>
-          {/* Add the image here */}
+          
           <img src="https://images.stockcake.com/public/2/d/9/2d9e381e-df3f-428b-bde9-8dea09e093b1_large/evening-cooking-session-stockcake.jpg" alt="Sample photo" style={{ width: '100%', borderTopLeftRadius: '.3rem', borderTopRightRadius: '.3rem' }} />
           <br/>
           <h2>Sign Up</h2>

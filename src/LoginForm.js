@@ -25,8 +25,11 @@ function LoginForm() {
   return (
     <div className="signup-container">
       <div className="signup-form">
-        <h2>Login</h2>
+        
         <form onSubmit={handleSubmit}>
+        <img src="https://images.stockcake.com/public/2/d/9/2d9e381e-df3f-428b-bde9-8dea09e093b1_large/evening-cooking-session-stockcake.jpg" alt="Sample photo" style={{ width: '100%', borderTopLeftRadius: '.3rem', borderTopRightRadius: '.3rem' }} />
+        <br/>
+        <h2>Login</h2>
           <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input

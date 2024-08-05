@@ -77,7 +77,7 @@ function Dashboard() {
                     <h1 className="h-primary center">Our Services</h1>
                     <div id="services">
                         <div className="box">
-                            <img src="Images/food-cat.jpg" alt="Food Catering" />
+                            <img src="Images/food cat.jpg" alt="Food Catering" />
                             <h2 className="h-secondary center">Food Catering</h2>
                             <p>Indulge in the ultimate dining experience with our exquisite food catering services. Whether it's a
                                 corporate event, wedding, or private party, our team of culinary experts will craft a customized menu
@@ -85,7 +85,7 @@ function Dashboard() {
                                 bite is a memorable one. Let us take care of the details so you can savor the moment. </p>
                         </div>
                         <div className="box">
-                            <img src="Images/restaurant.jpg" alt="Bulk Ordering" />
+                            <img src="Images/bulk cat.jpg" alt="Bulk Ordering" />
                             <h2 className="h-secondary center">Bulk Ordering</h2>
                             <p>Say goodbye to the hassle of bulk ordering! Our efficient and streamlined process makes it easy to
                                 order large quantities of your favorite meals. Whether it's for a family gathering, office lunch, or
@@ -93,7 +93,7 @@ function Dashboard() {
                                 Enjoy convenience, quality, and unbeatable taste with every order. </p>
                         </div>
                         <div className="box">
-                            <img src="Images/restaurant.jpg" alt="Online Food Delivery" />
+                            <img src="Images/food order.jpg" alt="Online Food Delivery" />
                             <h2 className="h-secondary center">Online Food Delivery</h2>
                             <p>Experience the best of culinary diversity with our extensive online food delivery services. From local
                                 delights to international cuisines, we bring the world to your plate. Our user-friendly platform
@@ -106,22 +106,22 @@ function Dashboard() {
                     <div className="clients">
                         <div className="client-item">
                             <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
-                                <img src="Images/apple_logo.jpg" alt="Apple" />
+                                <img src="Images/apple logo.jpg" alt="Apple" />
                             </a>
                         </div>
                         <div className="client-item">
                             <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
-                                <img src="Images/microsoft_logo.jpg" alt="Microsoft" />
+                                <img src="Images/microsoft logo.jpg" alt="Microsoft" />
                             </a>
                         </div>
                         <div className="client-item">
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                                <img src="Images/facebook_logo.jpg" alt="Facebook" />
+                                <img src="Images/facebook logo.jpg" alt="Facebook" />
                             </a>
                         </div>
                         <div className="client-item">
                             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                                <img src="Images/insta_logo.jpg" alt="Instagram" />
+                                <img src="Images/insta logo.jpg" alt="Instagram" />
                             </a>
                         </div>
                     </div>
@@ -138,7 +138,7 @@ function Dashboard() {
                             <input type="text" id="address" name="address" required />
                             <label htmlFor="phone-no">Phone No:</label>
                             <input type="text" id="phone-no" name="phone no" required />
-                            <button type="submit" className="btn">Submit</button>
+                            <button type="submit" className="btn" id="btn">Submit</button>
                         </form>
                     </div>
                 </section>

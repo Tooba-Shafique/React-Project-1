@@ -3,21 +3,29 @@ body {
   padding: 0;
   
 }
-
+.flex-item {
+  margin: 0px;
+  /* Other styles for the flex item */
+}
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh ;
+  margin: 0px 0px;
+  
+ 
+  
 }
 
 .signup-form {
   background-color: #fff;
-  padding: 40px;
+  padding: 90px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
+  
 }
 
 .signup-form h2 {
