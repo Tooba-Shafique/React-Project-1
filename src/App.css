@@ -13,6 +13,9 @@ body {
   align-items: center;
   height: 100vh ;
   margin: 0px 0px;
+  
+ 
+  
 }
 
 .signup-form {
@@ -73,3 +76,16 @@ font-size: 16px;
   font-size: 14px;
 }
 
+.nav-link a {
+  color: #007bff;
+}
+
+.nav-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .signup-form {
+    padding: 20px;
+  }
+}
