@@ -69,7 +69,7 @@ function Dashboard() {
                 <section id="Home">
                     <h4 className="h-primary">Welcome to Tooba's Food Website</h4>
                     <p>We're committed to providing you with the highest quality food and service.
-                        Join our family of satisfied customers who love our easy ordering and special offers.
+                        Join our family of satisfied customers who love our  ordering and special offers.
                         <br />Get ready to tantalize your taste buds with our mouthwatering specialties.</p>
                     <button className="btn" onClick={handleOrderNowClick}>Order Now</button>
                 </section>

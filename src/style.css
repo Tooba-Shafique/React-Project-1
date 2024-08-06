@@ -1,325 +1,353 @@
-
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     width: 100%;
-}
-
-.fitness {
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 200px;
-
-}
-
-.tooba {
-    color: #e0d1cd; /* Color for Tooba's */
-    margin-top: 100px;
-    text-decoration: none;
-}
-
-.fitness-link {
-    color: #c20b0b; /* Color for Fitness */
-    font-size: 40px;
-    text-decoration: none;
-}
-
-nav img {
-    border: 2px solid rgb(41, 30, 30);
-    border-radius: 40px;
-    height: 10px;
-    width: 70px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-#home {
-    padding: 3px 200px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#services .box {
-    width: 100%;
-    max-width: 300px;
-}
-
-#services {
-    margin: 34px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#home::before {
-    background-size: cover;
-    background-position: center center;
-}
-
-#contact-box form {
-    width: 40%;
-    max-width: 600px;
-}
-
-.navbar {
-    z-index: 1000;
-}
-
-:root {
-    --navbar-height: 59px;
+    text-align: center;
+    font-family: 'Baloo Bhai', cursive;
+    
 }
 
 #navbar {
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0px;
-}
-
-#navbar::before {
-    content: "";
-    background-color: rgb(14, 8, 8);
-    background: 2px solid black;
-    border-radius: 70px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.7;
-}
-
-#logo {
-    margin: 10px 34px;
+    justify-content: center;
+    
 }
 
 #logo img {
-    height: 59px;
-    margin: 3px 6px;
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-#navbar ul {
-    display: flex;
+.fitness {
+    font-weight: bold;
+    font-size: 20px;
     font-family: 'Baloo Bhai', cursive;
 }
 
-#navbar ul li {
+.tooba {
+    color: #e0d1cd;
+    text-decoration: none;
+}
+
+.fitness-link {
+    color: #c20b0b;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+#navbar ul {
     list-style: none;
-    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin: 0 10px;
 }
 
 #navbar ul li a {
     color: white;
-    display: block;
-    padding: 10px 10px;
-    border-radius: 20px;
     text-decoration: none;
-    /* padding: 30px auto; */
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    margin-right: 100px;
-    justify-content:center ;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 #navbar ul li a:hover {
+    background: white;
     color: black;
-    background-color: white;
 }
 
-/* Home Section */
 #Home {
-    display: flex;
-    flex-direction: column;
-    padding: 3px 200px;
-    height: 550px;
-}
-
-#Home::before {
-    content: "";
-    position: absolute;
     background: url('/public/Images/img1.jpg') no-repeat center center/cover;
-    height: 642px;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.89;
+    padding: 100px 20px;
+    color: white;
 }
 
 #Home h4 {
-    color: white;
-    text-align: center;
-    font-family: 'Bree Serif', serif;
-    font-size: 38px;
-    margin-top: 130px;
+    font-size: 2rem;
 }
 
 #Home p {
-    color: white;
-    text-align: center;
     font-size: 1.1rem;
-    font-family: 'Bree Serif', serif;
-    margin-top: 0px;
+    margin: 20px 0;
 }
 
-/* Services Section */
+.btn {
+    padding: 10px 30px;
+    background-color: #6d0c0c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
 #services {
-    margin: 34px;
+    padding: 50px 20px;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    justify-content: center; /* Center the boxes */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #services .box {
     border: 2px solid rgb(121, 17, 17);
-    padding: 34px;
-    margin: 20px;
-    border-radius: 28px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
     background: #d5c1c1;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    max-width: 300px;
 }
 
 #services .box img {
-    height: 160px;
+    height: 150px;
     margin: auto;
     display: block;
 }
 
-#services .box p {
-    font-family: 'Bree Serif', serif;
-    justify-content: center;
+#services .box h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
-/* Clients Section */
+#services .box p {
+    font-size: 1rem;
+}
+
 .client-section {
-    margin: 34px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 50px 20px;
     background: url('/public/Images/img\ new.jpg') no-repeat center center/cover;
 }
 
 .clients {
     display: flex;
-flex-direction:row;
-
-    margin-top: 20px;
-    width: 100%;
-   
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .client-item {
     margin: 10px;
-  
 }
 
 .clients img {
-    height: 150px;
-    width: 150px;
-    margin: 15px;
+    height: 120px;
+    width: 120px;
+    margin: 10px;
     border: 2px solid white;
     border-radius: 30px;
-    margin-left: 70px;
 }
 
-/* contact section */
 #contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    width: 100%;
+    padding: 50px 20px;
     background: url('/public/Images/main.jpg') no-repeat center center/cover;
     position: relative;
-  }
-  
-  #contact::before {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
-  }
-  
-  #contact h1 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#contact h1 {
     color: white;
-    text-align: center;
-    font-family: 'Bree Serif', serif;
-    font-size: 60px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    z-index: 1; /* Ensure it's on top of the overlay */
-  }
-  
-  #contact-box {
+    z-index: 1;
+}
+
+#contact-box {
     color: rgb(239, 234, 229);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-bottom: 34px;
     width: 100%;
-    margin-top: 20px; /* Adjust the margin as needed */
-    z-index: 1; /* Ensure it's on top of the overlay */
-  }
-  
-  #contact-box input,
-  #contact-box textarea {
+    z-index: 1;
+}
+
+#contact-box form {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    margin-bottom: 5px;
+}
+
+#contact-box input,
+#contact-box textarea {
     width: 100%;
     padding: 0.5rem;
     border-radius: 9px;
     font-size: 1.1rem;
     margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background */
-  }
-  
-  #contact-box form {
-    width: 40%;
-    margin-bottom: 20px;
-  }
-  
-  #contact-box label {
-    font-size: 1.3rem;
-    font-family: 'Bree Serif', serif;
-    margin-bottom: 5px;
-  }
-  
-  #contact-box button {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#contact-box button {
     padding: 10px 20px;
     background-color: #6d0c0c;
     color: #fff;
     border: none;
-   margin-top: 30px;
     cursor: pointer;
     font-size: 16px;
     margin: 35px auto;
-    display: block;
-    
-      }
-  
-  
-  #contact-box button:hover {
+}
+
+#contact-box button:hover {
     background-color: #000810;
-  }
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+.h-primary {
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 5px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 1.4rem;
+    padding: 12px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Media Queries */
 @media (max-width: 1200px) {
-    #home, #services, #contact, #client-section {
-        padding: 3px 100px;
+    #home, #services, #contact, .client-section {
+        padding: 0;
+    }
+
+    #navbar ul li a {
+        padding: 5px 5px;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    #services .box p {
+        font-size: calc(0.9rem + 0.2vw); /* Slightly smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 10px); /* Slightly smaller image size */
+    }
+
+    #services .box {
+        max-width: calc(300px - 20px); /* Slightly smaller width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: calc(0.8rem + 0.5vw);
     }
 }
 
 @media (max-width: 992px) {
-    #home, #services, #contact, #client-section {
-        padding: 3px 50px;
-        justify-content: center;
+    #home h4 {
+        font-size: 1.8rem;
     }
 
-    #navbar ul li a {
-        padding: 1px 0px;
+    #home p {
+        font-size: 0.8rem;
+    }
+
+    #services .box {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    #services .box p {
+        font-size: 0.85rem; /* Slightly smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 20px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 1.25rem; /* Slightly smaller font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 40px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .clients img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #contact h1 {
+        font-size: 2rem;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 1rem;
     }
 }
 
@@ -330,13 +358,10 @@ flex-direction:row;
 
     #logo {
         margin: 10px auto;
-        text-align: center;
-        justify-content: center;
     }
-    .fitness{
+
+    .fitness {
         margin: 10px auto;
-        text-align: center;
-        justify-content: center;
     }
 
     #navbar ul {
@@ -344,47 +369,210 @@ flex-direction:row;
         align-items: center;
     }
 
-    #Home {
-        padding: 3px 20px;
-        height: auto;
+    #home {
+        padding: 20px;
     }
 
-    #Home h4 {
-        font-size: 28px;
+    #services .box {
+        flex: 1 1 100%;
+        margin: 10px 0;
     }
 
-    #Home p {
-        font-size: 1rem;
+    #services .box p {
+        font-size: 0.8rem; /* Smaller font size for paragraphs */
     }
 
-    #services, #client-section, #contact {
-        padding: 3px 20px;
+    #services .box img {
+        height: calc(150px - 30px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 1rem; /* Further reduce font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 60px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .clients {
+        flex-direction: column;
+    }
+
+    .clients img {
+        height: 80px;
+        width: 80px;
     }
 
     #contact-box form {
         width: 100%;
     }
-}
 
-@media (max-width: 576px) {
-    #home, #services, #contact, #client-section {
-        padding: 3px 10px;
-    }
-
-    #Home h4 {
-        font-size: 24px;
-    }
-
-    #Home p {
+    .btn {
+        padding: 8px 15px;
         font-size: 0.9rem;
     }
 
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    .h-secondary {
+        text-align: center; /* Center text for .h-secondary */
+        font-size: 1.1rem; /* Slightly smaller font size for .h-secondary */
+    }
+}
+
+@media (max-width: 576px) {
+    #home h4 {
+        font-size: 1.7rem;
+    }
+
+    #home p {
+        font-size: 0.7rem;
+    }
+
     #services .box {
-        padding: 20px;
+        padding: 10px;
+    }
+
+    #services .box p {
+        font-size: 0.7rem; /* Further decrease font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 40px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 0.9rem; /* Further reduce font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 80px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
     }
 
     #contact h1 {
-        font-size: 32px;
+        font-size: 1.6rem;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.29rem + 0.7vw);
+    }
+
+    .h-secondary {
+        font-size: 1rem; /* Further decrease font size for .h-secondary */
+    }
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    #home, #services, #contact, .client-section {
+        padding: 0;
+    }
+
+    #navbar ul li a {
+        padding: 5px 5px;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    #services .box p {
+        font-size: calc(0.9rem + 0.2vw); /* Slightly smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 10px); /* Slightly smaller image size */
+    }
+
+    #services .box {
+        max-width: calc(300px - 20px); /* Slightly smaller width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: calc(0.8rem + 0.5vw);
+    }
+}
+
+@media (max-width: 992px) {
+    #home h4 {
+        font-size: 1.8rem;
+    }
+
+    #home p {
+        font-size: 0.8rem;
+    }
+
+    #services .box {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    #services .box p {
+        font-size: 0.85rem; /* Slightly smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 20px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 1.25rem; /* Slightly smaller font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 40px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .clients img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #contact h1 {
+        font-size: 2rem;
     }
 
     #contact-box input,
@@ -393,50 +581,422 @@ flex-direction:row;
     }
 
     .btn {
-        padding: 5px 30px;
+        padding: 8px 20px;
         font-size: 1rem;
     }
 }
 
-footer {
-    background: black;
-    color: white;
-    padding: 9px 20px;
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    #logo {
+        margin: 10px auto;
+    }
+
+    .fitness {
+        margin: 10px auto;
+    }
+
+    #navbar ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #home {
+        padding: 20px;
+    }
+
+    #services .box {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    #services .box p {
+        font-size: 0.8rem; /* Smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 30px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 1rem; /* Further reduce font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 60px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .clients {
+        flex-direction: column;
+    }
+
+    .clients img {
+        height: 80px;
+        width: 80px;
+    }
+
+    #contact-box form {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    .h-secondary {
+        text-align: center; /* Center text for .h-secondary */
+        font-size: 1.1rem; /* Slightly smaller font size for .h-secondary */
+    }
 }
 
-/* Utility Classes */
-.h-primary {
-    font-family: 'Bree Serif', serif;
-    font-size: 3.5rem;
-    padding: 5px;
+@media (max-width: 576px) {
+    #home h4 {
+        font-size: 1.7rem;
+    }
+
+    #home p {
+        font-size: 0.7rem;
+    }
+
+    #services .box {
+        padding: 10px;
+    }
+
+    #services .box p {
+        font-size: 0.7rem; /* Further decrease font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 40px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 0.9rem; /* Further reduce font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 80px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    #contact h1 {
+        font-size: 1.6rem;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.29rem + 0.7vw);
+    }
+
+    .h-secondary {
+        font-size: 1rem; /* Further decrease font size for .h-secondary */
+    }
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+    #home, #services, #contact, .client-section {
+        padding: 0;
+    }
+
+    #navbar ul li a {
+        padding: 5px 5px;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    #services .box p {
+        font-size: calc(0.9rem + 0.2vw); /* Slightly smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 10px); /* Slightly smaller image size */
+    }
+
+    #services .box {
+        max-width: calc(300px - 20px); /* Slightly smaller width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: calc(0.8rem + 0.5vw);
+    }
 }
 
-.h-secondary {
-    font-family: 'Bree Serif', serif;
-    font-size: 1.6rem;
-    padding: 12px;
+/* Media Queries */
+@media (max-width: 1200px) {
+    #home, #services, #contact, .client-section {
+        padding: 0;
+    }
+
+    #navbar ul li a {
+        padding: 5px 5px;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    #services .box p {
+        font-size: calc(0.9rem + 0.2vw); /* Slightly smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 10px); /* Slightly smaller image size */
+    }
+
+    #services .box {
+        max-width: calc(300px - 20px); /* Slightly smaller width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: calc(0.8rem + 0.5vw);
+    }
 }
 
-.btn {
-    padding: 5px 70px;
-    background-color: #6d0c0c;
-    color: white;
-    margin: 130px auto;
-    font-size: 1.1rem;
-    cursor: pointer;
-    width: 400px;
-    margin-top: 60px;
-}
-.btn:hover {
-    background-color: black;
-    color: white;
-}
-.center {
-    text-align: center;
+@media (max-width: 992px) {
+    #home h4 {
+        font-size: 1.8rem;
+    }
+
+    #home p {
+        font-size: 0.8rem;
+    }
+
+    #services .box {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    #services .box p {
+        font-size: 0.85rem; /* Slightly smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 20px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 1.25rem; /* Slightly smaller font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 40px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .clients img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #contact h1 {
+        font-size: 2rem;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
 }
 
-#message input[type="text"] {
-    height: 100px;
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    #logo {
+        margin: 10px auto;
+    }
+
+    .fitness {
+        margin: 10px auto;
+    }
+
+    #navbar ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #home {
+        padding: 20px;
+    }
+
+    #services .box {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    #services .box p {
+        font-size: 0.8rem; /* Smaller font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 30px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 1rem; /* Further reduce font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 60px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    .clients {
+        flex-direction: column;
+    }
+
+    .clients img {
+        height: 80px;
+        width: 80px;
+    }
+
+    #contact-box form {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.8rem + 0.5vw);
+    }
+
+    .h-secondary {
+        text-align: center; /* Center text for .h-secondary */
+        font-size: 1.1rem; /* Slightly smaller font size for .h-secondary */
+    }
 }
 
+@media (max-width: 576px) {
+    #home h4 {
+        font-size: 1.7rem;
+    }
 
+    #home p {
+        font-size: 0.7rem;
+    }
+
+    #services .box {
+        padding: 10px;
+        justify-content: center;
+    }
+
+    #services .box p {
+        font-size: 0.7rem; /* Further decrease font size for paragraphs */
+    }
+
+    #services .box img {
+        height: calc(150px - 40px); /* Further reduce image size */
+    }
+
+    #services .box h2 {
+        font-size: 0.9rem; /* Further reduce font size for headings */
+    }
+
+    #services .box {
+        max-width: calc(300px - 80px); /* Further reduce width for div */
+        margin: 10px; /* Ensure boxes are spaced properly */
+    }
+
+    #services {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center the section */
+    }
+
+    #contact h1 {
+        font-size: 1.6rem;
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    #Home h4, #services .box h2, #contact h1, .h-primary, .h-secondary {
+        font-size: calc(1.29rem + 0.7vw);
+    }
+
+    .h-secondary {
+        font-size: 1rem; /* Further decrease font size for .h-secondary */
+    }
+}
