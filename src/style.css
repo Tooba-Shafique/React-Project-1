@@ -452,3 +452,88 @@ footer {
         font-size: 0.8rem;
     }
 }
+/* Navbar */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-family: 'Baloo Bhai', cursive;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar Container */
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Toggle Button */
+.toggle-button {
+    display: none;
+}
+
+/* Navbar Links */
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin: 0 10px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+#navbar ul li a:hover {
+    background: white;
+    color: black;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #navbar ul {
+        display: none;
+    }
+
+    #navbar ul.show {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    #navbar ul.show li {
+        margin: 10px 0;
+    }
+
+    #navbar ul.show li a {
+        padding: 10px;
+    }
+}

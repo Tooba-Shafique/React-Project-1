@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect  , useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
@@ -39,7 +39,20 @@ function Dashboard() {
     const handleOrderNowClick = () => {
         window.location.href = '#contact';
     };
+    const [showMenu, setShowMenu] = useState(false);
 
+    useEffect(() => {
+        const handleToggleClick = () => {
+            setShowMenu(!showMenu);
+        };
+
+        const toggleButton = document.getElementById('toggle-button');
+        if (toggleButton) {
+            toggleButton.addEventListener('click', handleToggleClick);
+        } else {
+            console.error('Toggle button element not found');
+        }
+    }, [showMenu]);
     return (
         <>
             <div>
@@ -52,20 +65,21 @@ function Dashboard() {
                 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet" />
 
                 <nav id="navbar">
-                    <div id="logo">
-                        <img src="Images/logo.jpeg" alt="Logo" />
-                    </div>
-                    <div className="fitness">
-                        <a href="#Home" className="fitness-link">TS</a>
-                        <a href="#Home" className="tooba">Restaurant</a>
-                    </div>
-                    <ul>
-                        <li className="item"><a href="#Home">Home</a></li>
-                        <li className="item"><a href="#services-container">Services</a></li>
-                        <li className="item"><a href="#clients">Our Clients</a></li>
-                        <li className="item"><a href="#contact">Contact Us</a></li>
-                    </ul>
-                </nav>
+                <div id="logo">
+                    <img src="Images/logo.jpeg" alt="Logo" />
+                </div>
+                <div className="fitness">
+                    <a href="#Home" className="fitness-link">TS</a>
+                    <a href="#Home" className="tooba">Restaurant</a>
+                </div>
+                <button id="toggle-button" className="toggle-button">Toggle Menu</button>
+                <ul className={showMenu ? 'show' : ''}>
+                    <li className="item"><a href="#Home">Home</a></li>
+                    <li className="item"><a href="#services-container">Services</a></li>
+                    <li className="item"><a href="#clients">Our Clients</a></li>
+                    <li className="item"><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
                 <section id="Home">
                     <h4 className="h-primary">Welcome to Tooba's Food Website</h4>
                     <p>We're committed to providing you with the highest quality food and service.
