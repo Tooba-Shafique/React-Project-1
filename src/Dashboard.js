@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect  } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
@@ -10,24 +10,16 @@ function Dashboard() {
             const foodItemName = event.target['food item name'].value;
             const address = event.target.address.value;
             const phoneNo = event.target['phone no'].value;
-
-            // Store data in local storage
             localStorage.setItem('name', name);
             localStorage.setItem('foodItemName', foodItemName);
             localStorage.setItem('address', address);
             localStorage.setItem('phoneNo', phoneNo);
-
-            // Show thank you message and alert
-            alert('Thank you for visiting our site! Thank you for your feedback.');
-
-            // Reset form fields
+            alert('Your order has been placed. Thank you !');
             event.target.reset();
-
-            // Navigate to Home section
             window.location.href = '#Home';
         };
 
-        // Add event listener to the form
+       
         const form = document.getElementById('contact-form');
         if (form) {
             form.addEventListener('submit', handleSubmit);

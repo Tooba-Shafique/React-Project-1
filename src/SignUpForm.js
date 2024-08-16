@@ -1,29 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
-
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
+import { encrypt } from './Encrypt';
 function SignUpForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (name && password && email) {
-      localStorage.setItem("Name", name);
-      localStorage.setItem("Password", password);
-      localStorage.setItem("Email", email);
-      navigate("/login");
-      setName('');
-      setEmail('');
-      setPassword('');
-      alert("Successfully Signed Up! Please Login.");
-    } else {
-      alert("All fields are required.");
-    }
-  };
-
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    const password1 = encrypt(password);
+    const user1 = { name:name, email:email, password:password1 };
+    const response=await axios.post('http://localhost:8080/api/v1/register',user1)
+    console.log("The responce is:" ,response)
+    if(response.data.success===true){
+      toast.success(response.data.message)
+      navigate('/login');
+    }else{
+      toast.success(response.data.message)
+    } };
   return (
     <div className="signup-container" >
       <div className="signup-form">

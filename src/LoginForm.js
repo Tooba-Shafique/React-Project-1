@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
+import axios from 'axios'
+import toast from 'react-hot-toast'
+
 
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    const storedName = localStorage.getItem("Name");
-    const storedPassword = localStorage.getItem("Password");
-    const storedEmail = localStorage.getItem("Email");
-
-    if (email === storedEmail && password === storedPassword) {
-      alert("Login Successful!");
-      // Here you would typically handle the login logic, e.g., redirect to dashboard
-      navigate("/dashboard"); // Replace with the actual route to your dashboard
-    } else {
-      alert("Invalid Email or Password.");
-    }
-  };
-
+    const response = await axios.get(`http://localhost:8080/api/v1/login?email=${email}`)
+    console.log("The response is :" , response)
+    if(response?.data?.success===true){
+    toast.success(response?.data?.message)
+      navigate('/dashboard');
+    }else{
+    toast.error(response?.data?.message)
+    } };
+    
   return (
     <div className="signup-container">
       <div className="signup-form">
